@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText"
+    placeholder="Search for a movie title...">
+  <div *ngFor="let movie of movies | filter:searchText" class="component-container">
+    <ul class="component-list">
+      <li class="component-item">
+        <a routerLink="/movie/{{ movie.episode_id }}" class="component-details">
+          <h2 class="component-detail">Episode {{ movie.episode_id }}: {{ movie.title }}</h2>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

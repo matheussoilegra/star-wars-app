@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Days+One");
+@import "../../../styles/colors";
+@import "../../../styles/global";
+@import "../../../styles/mixins";
+
+* {
+  @include reset;
+  @include font-general;
+}
+
+.component-container {
+  @include positioning(block, column, center, space-between);
+
+  width: 100%;
+  height: 100vh;
+
+  .component-detail {
+    @include positioning(flex, row, center, initial);
+
+    color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin: 1rem;
+  }
+
+  .component-list {
+    @include positioning(flex, row, center, center);
+
+    .component-item {
+      @include positioning(inline-block, column, center, center);
+
+      margin: 1rem;
+
+      .component-link {
+        text-decoration: none;
+        background-color: $bg-details;
+        border-radius: 10px 10px 10px 10px;
+        padding: 0.5rem;
+
+        &:hover {
+          @include lightsaber($blue-lgsaber);
+
+          transition: $transition;
+          line-height: 1.25em;
+          padding: 10px;
+          margin: 16px 0px;
+          border-radius: 10px 10px 10px 10px;
+        }
+      }
+    }
+  }
+}

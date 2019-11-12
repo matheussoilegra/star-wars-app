@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Days+One");
+@import "../../../styles/colors";
+@import "../../../styles/global";
+@import "../../../styles/mixins";
+
+* {
+  @include reset;
+  @include font-general;
+}
+
+.nav-list {
+  @include positioning(block, row, center, space-between);
+
+  color: white;
+  background: transparent;
+  padding-right: 1rem;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+
+  @media (max-width: 650px) {
+    @include positioning(flex, column, center, center);
+
+    padding-right: 0;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: white;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0black, 0 -0.5px black;
+  }
+
+  .component-list {
+    @include positioning(flex, row, center, space-around);
+    @include link(none, none);
+
+    @media (max-width: 650px) {
+      @include positioning(flex, column, center, center);
+
+      text-align: center;
+      font-size: 0.8rem;
+      height: 15vh;
+    }
+
+    .link {
+      @include positioning(block, row, center, center);
+
+      text-decoration: none;
+      color: inherit;
+      padding-left: 16px;
+
+      @media (max-width: 650px) {
+        @include positioning(flex, column, center, center);
+
+        padding-left: 0;
+      }
+    }
+
+    .home {
+      @include lightsaber-hover($blue-lgsaber);
+    }
+
+    .about {
+      @include lightsaber-hover($red-lgsaber);
+    }
+
+    .home,
+    .about {
+      font-size: 1.75em;
+      line-height: 1.25em;
+      padding: 0;
+      margin: 16px 0px;
+      width: 0;
+      border-radius: 0px 10px 100px 0px;
+      transition: $transition;
+
+      &:hover {
+        width: 20%;
+        padding: 0px 16px 0px 0px;
+        color: black;
+      }
+
+      @media (max-width: 650px) {
+        @include lightsaber-hover(transparent);
+
+        margin: 16px 0px;
+
+        &:hover {
+          width: 0;
+          padding: 0;
+          color: white;
+          text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+      }
+    }
+  }
+}
+
+.component-title {
+  @include lightsaber-title($yellow-lgsaber);
+
+  font-size: 4rem;
+  color: #000;
+  text-shadow: -1px 0 #ff0, 0 1px #ff0, 1px 0 #ff0, 0 -1px #ff0;
+  text-align: center;
+
+  @media (max-width: 650px) {
+    @include positioning(flex, column, center, center);
+
+    font-size: 2rem;
+    height: 5vh;
+  }
+}

@@ -1,0 +1,13 @@
+<div *ngIf="planets" class="component-container">
+  <h1 class="component-title">Planets</h1>
+  <ul class="component-list">
+    <li *ngFor="let planet of planets" class="component-item">
+      <div class="component-details">
+        <h2 class="component-name">{{ planet.name }}</h2>
+        <p class="component-detail">Diameter: {{ planet.diameter }}</p>
+        <p class="component-detail">Population: {{ planet.population }}</p>
+        <p class="component-detail">Terrain: {{ planet.terrain }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

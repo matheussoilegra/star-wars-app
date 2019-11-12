@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Days+One");
+@import "../../../styles/colors";
+@import "../../../styles/global";
+@import "../../../styles/mixins";
+
+* {
+  @include reset;
+  @include font-general;
+}
+
+.page {
+  @include lightsaber-page($green-lgsaber);
+
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+
+  .text {
+    @include positioning(flex, row, center, center);
+  }
+}

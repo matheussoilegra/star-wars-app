@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Days+One");
+@import "../../../styles/colors";
+@import "../../../styles/global";
+@import "../../../styles/mixins";
+
+* {
+  @include reset;
+  @include font-general;
+}
+
+.component-container {
+  @include positioning(inline-block, column, center, center);
+
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+
+  .component-title {
+    @include positioning(flex, row, center, center);
+    @include lightsaber($blue-lgsaber);
+
+    transition: $transition;
+    width: 100%;
+    font-size: 3rem;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    background: transparent;
+
+    @media (max-width: 650px) {
+      @include positioning(inline-block, column, center, center);
+
+      font-size: 1.5rem;
+      margin: 1rem;
+      width: 80%;
+    }
+  }
+
+  .component-list-details {
+    @include positioning(inline-block, column, center, center);
+
+    width: 80%;
+    background-color: $bg-list;
+
+    @media (max-width: 650px) {
+      @include positioning(inline-block, column, center, center);
+
+      font-size: 1rem;
+    }
+  }
+
+  .component-list-links {
+    @include positioning(inline-flex, row, center, center);
+
+    width: 80%;
+    background-color: $bg-list;
+
+    @media (max-width: 750px) {
+      @include positioning(inline-block, column, center, space-between);
+    }
+  }
+
+  .component-item {
+    @include positioning(flex, column, center, center);
+
+    margin: 1rem;
+    color: black;
+
+    @media (max-width: 750px) {
+      @include positioning(inline-block, row, center, center);
+
+      font-size: 0.8rem;
+      margin: 0.8rem;
+    }
+
+    .component-detail {
+      background-color: #5d5c5b;
+      color: white;
+      border-radius: 10px;
+      padding: 0.5rem;
+
+      &:link {
+        text-decoration: none;
+        color: black;
+      }
+
+      &:hover {
+        @include lightsaber($blue-lgsaber);
+
+        text-decoration: underline;
+        color: black;
+      }
+    }
+  }
+}

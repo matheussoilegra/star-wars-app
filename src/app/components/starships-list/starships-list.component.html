@@ -1,0 +1,13 @@
+<div *ngIf="starships" class="component-container">
+  <h1 class="component-title">Starships</h1>
+  <ul class="starships-list">
+    <li *ngFor="let starship of starships" class="component-item">
+      <div class="component-details">
+        <h2 class="component-name">{{ starship.name }}</h2>
+        <p class="component-detail">Model: {{ starship.model }}</p>
+        <p class="component-detail">Manufacturer: {{ starship.manufacturer }}</p>
+        <p class="component-detail">Passengers: {{ starship.passengers }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

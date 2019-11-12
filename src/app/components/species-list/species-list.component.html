@@ -1,0 +1,13 @@
+<div *ngIf="species" class="component-container">
+  <h1 class="component-title">Species</h1>
+  <ul class="component-list">
+    <li *ngFor="let specie of species" class="component-item">
+      <div class="component-details">
+        <h2 class="component-name">{{ specie.name }}</h2>
+        <p class="component-detail">Classification: {{ specie.classification }}</p>
+        <p class="component-detail">Designation: {{ specie.designation }}</p>
+        <p class="component-detail">Language: {{ specie.language }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

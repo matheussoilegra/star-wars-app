@@ -1,0 +1,44 @@
+<div class="component-container">
+  <h1 class="component-title">Episode {{ movie.episode_id }}: {{ movie.title }}</h1>
+  <ul class="component-list-details">
+    <li class="component-item">
+      Director: {{ movie.director }}
+    </li>
+    <li class="component-item">
+      Producer: {{ movie.producer }}
+    </li>
+    <li class="component-item">
+      Release Date: {{ movie.release_date | date }}
+    </li>
+    <li class="component-item">
+      {{ movie.opening_crawl }}
+    </li>
+  </ul>
+  <ul class="component-list-links">
+    <li class="component-item">
+      <a routerLink="/movie/{{ movie.episode_id }}/characters" class="component-detail">
+        Characters
+      </a>
+    </li>
+    <li class="component-item">
+      <a routerLink="/movie/{{ movie.episode_id }}/planets" class="component-detail">
+        Planets
+      </a>
+    </li>
+    <li class="component-item">
+      <a routerLink="/movie/{{ movie.episode_id }}/vehicles" class="component-detail">
+        Vehicles
+      </a>
+    </li>
+    <li class="component-item">
+      <a routerLink="/movie/{{ movie.episode_id }}/species" class="component-detail">
+        Species
+      </a>
+    </li>
+    <li class="component-item">
+      <a routerLink="/movie/{{ movie.episode_id }}/starships" class="component-detail">
+        Starships
+      </a>
+    </li>
+  </ul>
+</div>

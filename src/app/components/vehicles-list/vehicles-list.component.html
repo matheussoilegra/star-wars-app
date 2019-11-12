@@ -1,0 +1,13 @@
+<div *ngIf="vehicles" class="component-container">
+  <h1 class="component-title">Vehicles</h1>
+  <ul class="component-list">
+    <li *ngFor="let vehicle of vehicles" class="component-item">
+      <div class="component-details">
+        <h2 class="component-name">{{ vehicle.name }}</h2>
+        <p class="component-detail">Model: {{ vehicle.model }}</p>
+        <p class="component-detail">Manufacturer: {{ vehicle.manufacturer }}</p>
+        <p class="component-detail">Vehicle class: {{ vehicle.vehicle_class }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

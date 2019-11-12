@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Days+One");
+@import "../../../styles/colors";
+@import "../../../styles/global";
+@import "../../../styles/mixins";
+
+* {
+  @include reset;
+  @include font-general;
+}
+
+.wrapper {
+  margin: 1.5rem;
+  height: 100vh;
+
+  @media (max-width: 650px) {
+    margin: 0.5rem;
+  }
+
+  .form-control {
+    @include lightsaber-search($yellow-lgsaber);
+
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    transition: $transition;
+    padding: 0px;
+    margin: 16px 0px;
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+  }
+
+  .component-container {
+    @include positioning(inline-block, column, center, center);
+
+    background-color: $bg-list;
+    width: 100%;
+    text-align: center;
+
+    .component-list {
+      @include positioning(inline-block, column, center, center);
+
+      width: 80%;
+
+      @media (max-width: 650px) {
+        height: 10%;
+        font-size: 0.75rem;
+      }
+    }
+
+    .component-item {
+      @include positioning(inline-block, row, center, center);
+
+      margin: 1.5rem;
+
+      @media (max-width: 650px) {
+        margin: 1rem;
+      }
+
+      .component-details {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          @include lightsaber($yellow-lgsaber);
+
+          transition: $transition;
+          padding: 0px;
+          margin: 16px 0px;
+          border-radius: 0px 10px 0 0px;
+        }
+      }
+    }
+  }
+}
