@@ -129,4 +129,4 @@ Angular_Exam
 
 ## Sobre o projeto
 
-Projeto desenvolvido na Trilha de Estudos Front-end da ilegra a fim de exercitar a utilização de todos as habilidades adquiridas ao longo da trilha, estruturando o projeto através do framework Angular 8.
+Projeto desenvolvido na Trilha de Estudos Front-end da ilegra a fim de exercitar a utilização de todas as habilidades adquiridas ao longo da trilha, estruturando o projeto através do framework Angular 8.
